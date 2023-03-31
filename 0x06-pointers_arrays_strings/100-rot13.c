@@ -17,7 +17,7 @@ char *rot13(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; data1[i] != '\0'; j++)
+		for (j = 0; data1[j] != '\0'; j++)
 		{
 			if (s[i] == data1[j] && s[i - 1] != '\\')
 			{
