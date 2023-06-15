@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 
+/**
+ * f4 - finds the biggest number
+ *
+ * @usrn: username
+ * @len: length of username
+ * Return: the biggest number
+ */
 int f4(char *usrn, int len)
 {
     int ch;
@@ -24,6 +31,13 @@ int f4(char *usrn, int len)
     return (rand_num & 63);
 }
 
+/**
+ * f5 - multiplies each char of username
+ *
+ * @usrn: username
+ * @len: length of username
+ * Return: multiplied char
+ */
 int f5(char *usrn, int len)
 {
     int ch;
@@ -40,6 +54,12 @@ int f5(char *usrn, int len)
     return (((unsigned int)ch ^ 239) & 63);
 }
 
+/**
+ * f6 - generates a random char
+ *
+ * @usrn: username
+ * Return: a random char
+ */
 int f6(char *usrn)
 {
     int ch;
@@ -56,6 +76,14 @@ int f6(char *usrn)
     return (((unsigned int)ch ^ 229) & 63);
 }
 
+
+/**
+ * main - Entry point
+ *
+ * @argc: arguments count
+ * @argv: arguments vector
+ * Return: Always 0
+ */
 int main(int argc, char **argv)
 {
     char keygen[7];
