@@ -3,18 +3,12 @@
 #include <stdio.h>
 #include "hash_tables.h"
 
-/**
- * shash_table_create - Create a new sorted hash table
- * @size: The size of the hash table
- *
- * Return: Pointer to the created hash table
- */
 shash_table_t *shash_table_create(unsigned long int size)
 {
 	shash_table_t *ht = malloc(sizeof(shash_table_t));
 
 	if (ht == NULL)
-		return NULL;
+		return (NULL);
 
 	ht->size = size;
 	ht->array = calloc(size, sizeof(shash_node_t *));
@@ -24,14 +18,6 @@ shash_table_t *shash_table_create(unsigned long int size)
 	return (ht);
 }
 
-/**
- * shash_table_set - Insert a key/value pair into the sorted hash table
- * @ht: The hash table
- * @key: The key
- * @value: The value
- *
- * Return: 1 on success, 0 on failure
- */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
@@ -85,13 +71,6 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	return (1);
 }
 
-/**
- * shash_table_get - Retrieve the value associated with a key from the sorted hash table
- * @ht: The hash table
- * @key: The key
- *
- * Return: The value associated with the key, or NULL if not found
- */
 char *shash_table_get(const shash_table_t *ht, const char *key)
 {
 	unsigned long int index;
@@ -112,10 +91,6 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 	return (NULL);
 }
 
-/**
- * shash_table_print - Print the sorted hash table
- * @ht: The hash table
- */
 void shash_table_print(const shash_table_t *ht)
 {
 	shash_node_t *curr;
@@ -137,10 +112,6 @@ void shash_table_print(const shash_table_t *ht)
 	printf("}\n");
 }
 
-/**
- * shash_table_print_rev - Print the sorted hash table in reverse order
- * @ht: The hash table
- */
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	shash_node_t *curr;
@@ -162,10 +133,6 @@ void shash_table_print_rev(const shash_table_t *ht)
 	printf("}\n");
 }
 
-/**
- * shash_table_delete - Delete the sorted hash table
- * @ht: The hash table
- */
 void shash_table_delete(shash_table_t *ht)
 {
 	unsigned long int i;
