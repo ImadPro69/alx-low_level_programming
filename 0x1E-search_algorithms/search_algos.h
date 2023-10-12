@@ -11,8 +11,7 @@
  * @index: Index of the node in the list
  * @next: Pointer to the next node
  *
- * Description: singly linked list node structure
- * for Holberton project
+ * Description: SINGLY linked list node structure
  */
 typedef struct listint_s
 {
