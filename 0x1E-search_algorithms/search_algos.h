@@ -11,7 +11,7 @@
  * @index: Index of the node in the list
  * @next: Pointer to the next node
  *
- * Description: SINGLY linked list node structure
+ * Description: SINGLY   linked list node structure
  */
 typedef struct listint_s
 {
